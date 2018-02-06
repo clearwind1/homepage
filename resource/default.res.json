@@ -1,0 +1,48 @@
+{
+	"groups":[
+	{
+		"keys": "loadingbar_png,loadingbarbg_png,gifloadingbar1_png,gifloadingbar2_png,gifloadingbar3_png,gifloadingbar4_png,gifloadingbar5_png,gifloadingbar6_png,gifloadingbar7_png,gifloadingbar8_png",
+		"name": "preloading"
+	},
+	{
+		"keys":"startgamebg_jpg,startgamebtn_png",
+		"name":"preload"
+	}],
+	"resources":[
+	{
+		"name":"loadingbar_png",
+		"type":"image",
+		"url":"assets/loadingbar.png"
+	},
+	{
+		"name":"description",
+		"type":"json",
+		"url":"config/description.json"
+	},
+	{
+		"name":"startgamebg_jpg",
+		"type":"image",
+		"url":"assets/startgamebg.jpg"
+	},
+	{
+		"name":"startgamebtn_png",
+		"type":"image",
+		"url":"assets/startgamebtn.png"
+	},
+	{
+		"name": "loadingbarbg_png",
+		"type": "image",
+		"url": "assets/loadingbarbg.png"
+	},
+	{
+		"name": "gifloadingbar1_png",
+		"type": "image",
+		"url": "assets/gifloadingbar1.png"
+	},
+	{
+		"name": "gifloadingbar2_png",
+		"type": "image",
+		"url": "assets/gifloadingbar2.png"
+	}
+	]
+}

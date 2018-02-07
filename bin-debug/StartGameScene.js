@@ -29,6 +29,7 @@ var StartGameScene = (function (_super) {
     StartGameScene.prototype.show = function (data) {
         if (data['code'] == 1) {
             this.showbg();
+            this.showcontain();
         }
         else {
             GameUtil.trace(data['msg']);
@@ -41,14 +42,19 @@ var StartGameScene = (function (_super) {
         shap.width = this.mStageW;
         shap.height = this.mStageH;
         this.addChild(shap);
-        var posx = this.mStageW / 2;
-        var posy = this.mStageH / 2;
-        var gametitletext = new GameUtil.MyTextField(posx, 200, 100, 0.5, 0.5);
-        gametitletext.setText(GameConfig.GAMENAME);
-        gametitletext.italic = true;
-        gametitletext.textColor = 0x75bfea;
-        this.addChild(gametitletext);
-        this.addChild(new GameMenus(DisType.LeftTRight));
+    };
+    StartGameScene.prototype.showcontain = function () {
+        var offx = (this.mStageW - 500) / 2;
+        var offy = 300;
+        for (var i = 0; i < GameConfig.SERVERGAMENAME.length; i++) {
+            var gameicon = new GameUtil.Menu(this, GameConfig.SERVERGAMENAME[i] + '_jpg', GameConfig.SERVERGAMENAME[i] + '_jpg', this.jumpurl, [i]); //new MyBitmap(RES.getRes(gameName[i] + '_jpg'), offx + 110 * i % 4, offy + Math.floor(i / 4) * 110);
+            gameicon.x = offx + 210 * (i % 4);
+            gameicon.y = offy + Math.floor(i / 4) * 210;
+            this.addChild(gameicon);
+        }
+    };
+    StartGameScene.prototype.jumpurl = function (gameid) {
+        window.open(GameConfig.GAMEIPNAME + "/" + GameConfig.SERVERGAMENAME[gameid]);
     };
     /**开始游戏 */
     StartGameScene.prototype.startgame = function () {

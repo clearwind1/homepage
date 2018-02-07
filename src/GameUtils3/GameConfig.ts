@@ -11,8 +11,9 @@ enum SceneEffect { NullAction, CrossLeft, TransAlpha, OpenDoor };
 class GameConfig {
     /**基本配置 */
     public static DEBUG: boolean = true;
+    public static GAMEIPNAME: string = "http://www.hardymonkey.com";
     public static IP: string = "api.h5.gamexun.com";        //http连接地址
-    public static GAMENAME: string = '方块大冒险';           //游戏在服务器上的名字
+    public static GAMENAME: string = '一起来吧';           //游戏在服务器上的名字
     public static SERVERNAME: string = 'children';          //服务器连接名
     public static FIRSTGAME: string = 'firstgame';          //第一次进游戏标示
     public static GAMESOUND: string = 'gamesound';          //游戏音效
@@ -24,6 +25,10 @@ class GameConfig {
         'startgamebgm.mp3', 'gamebgm.mp3', 'comble.mp3', 'remove.mp3', 'newcored.mp3', 'clickf.mp3'
         // 'die.mp3', 'fail.mp3', 'goal.mp3', 'beatt.mp3', 'click.mp3'
     ];
+    public static SERVERGAMENAME: string[] =
+    [
+        'numberhrd','xiaoxiaofight',
+    ];
     public static MoreGameName: string[] =                  //更多游戏名称
     [
         //'czlongzrun','lookcarechild','sanguorun','savequyuan','sjlpicka','sjlrecard','bubblefightv02'
@@ -31,8 +36,8 @@ class GameConfig {
 
     public static GUIDESTEPNUM: number = 2;          //新手引导总步数
 
-    public static DesignWidth: number = 755;         //游戏设计尺寸宽
-    public static DesignHeight: number = 1334;       //游戏设计尺寸高
+    public static DesignWidth: number = 1024;         //游戏设计尺寸宽
+    public static DesignHeight: number = 768;       //游戏设计尺寸高
 
     //常用判断类型    
     public static UATYPE = {

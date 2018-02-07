@@ -59,8 +59,9 @@ var GameConfig = (function () {
     };
     /**基本配置 */
     GameConfig.DEBUG = true;
+    GameConfig.GAMEIPNAME = "http://www.hardymonkey.com";
     GameConfig.IP = "api.h5.gamexun.com"; //http连接地址
-    GameConfig.GAMENAME = '方块大冒险'; //游戏在服务器上的名字
+    GameConfig.GAMENAME = '一起来吧'; //游戏在服务器上的名字
     GameConfig.SERVERNAME = 'children'; //服务器连接名
     GameConfig.FIRSTGAME = 'firstgame'; //第一次进游戏标示
     GameConfig.GAMESOUND = 'gamesound'; //游戏音效
@@ -71,10 +72,13 @@ var GameConfig = (function () {
         'startgamebgm.mp3', 'gamebgm.mp3', 'comble.mp3', 'remove.mp3', 'newcored.mp3', 'clickf.mp3'
         // 'die.mp3', 'fail.mp3', 'goal.mp3', 'beatt.mp3', 'click.mp3'
     ];
+    GameConfig.SERVERGAMENAME = [
+        'numberhrd', 'xiaoxiaofight',
+    ];
     GameConfig.MoreGameName = [];
     GameConfig.GUIDESTEPNUM = 2; //新手引导总步数
-    GameConfig.DesignWidth = 755; //游戏设计尺寸宽
-    GameConfig.DesignHeight = 1334; //游戏设计尺寸高
+    GameConfig.DesignWidth = 1024; //游戏设计尺寸宽
+    GameConfig.DesignHeight = 768; //游戏设计尺寸高
     //常用判断类型    
     GameConfig.UATYPE = {
         WeiXinstr: 'micromessenger',

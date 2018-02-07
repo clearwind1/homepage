@@ -128,7 +128,7 @@ var GameUtil;
                 RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
                 RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
                 RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
-                //this.loadedfun.apply(this.thisObj);
+                this.loadedfun.apply(this.thisObj);
                 /*
                 new GameUtil.LoadingLogopre(() => {
                     console.log('load1');

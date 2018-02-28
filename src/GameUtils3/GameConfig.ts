@@ -27,7 +27,8 @@ class GameConfig {
     ];
     public static SERVERGAMENAME: string[] =
     [
-        'numberhrd','xiaoxiaofight',
+        'numberhrd', 'xiaoxiaofight', 'sjlrecard', 'sjlpicka', 'czlongzrun', 'sanguorun',
+        'savequyuan', 'lookcarechild', 'diamstorm', 'popfruit', 'jumpjump', 'cossman', 'tetris', 'niu', 'werock'
     ];
     public static MoreGameName: string[] =                  //更多游戏名称
     [

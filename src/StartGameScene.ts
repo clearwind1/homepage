@@ -37,16 +37,25 @@ class StartGameScene extends GameUtil.BassPanel {
     private showcontain() {
         var offx = (this.mStageW - 500) / 2;
         var offy = 300;
-        for (let i: number = 0; i < GameConfig.SERVERGAMENAME.length; i++){
-            var gameicon = new GameUtil.Menu(this, GameConfig.SERVERGAMENAME[i] + '_jpg', GameConfig.SERVERGAMENAME[i] + '_jpg', this.jumpurl, [i]);//new MyBitmap(RES.getRes(gameName[i] + '_jpg'), offx + 110 * i % 4, offy + Math.floor(i / 4) * 110);
-            gameicon.x = offx + 210 * (i % 4);
-            gameicon.y = offy + Math.floor(i / 4) * 210;
-            this.addChild(gameicon);
+        var list = new GameUtil.ScrollView(900, 450);
+        list.x = 62;
+        list.y = 300;
+        this.addChild(list);
+
+        var rectbg = GameUtil.createRect(0, 0, 900, 920, 1, 0x37b4c7);
+        list.putItem(rectbg);
+
+        for (let i: number = 0; i < GameConfig.SERVERGAMENAME.length; i++) {
+            var gameicon = new GameUtil.Menu(this, GameConfig.SERVERGAMENAME[i] + '_jpg', GameConfig.SERVERGAMENAME[i] + '_jpg', this.jumpurl, [i]);
+            gameicon.x = 100 + 210 * (i % 4);
+            gameicon.y = 60 + Math.floor(i / 4) * 210;
+            //this.addChild(gameicon);
+            list.putItem(gameicon);
         }
     }
 
     private jumpurl(gameid) {
-        window.open(GameConfig.GAMEIPNAME + "/" + GameConfig.SERVERGAMENAME[gameid]);
+        window.open("http://h5.sxd55.com" + "/" + GameConfig.SERVERGAMENAME[gameid]);
     }
 
     /**开始游戏 */

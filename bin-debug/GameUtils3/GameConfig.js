@@ -73,7 +73,8 @@ var GameConfig = (function () {
         // 'die.mp3', 'fail.mp3', 'goal.mp3', 'beatt.mp3', 'click.mp3'
     ];
     GameConfig.SERVERGAMENAME = [
-        'numberhrd', 'xiaoxiaofight',
+        'numberhrd', 'xiaoxiaofight', 'sjlrecard', 'sjlpicka', 'czlongzrun', 'sanguorun',
+        'savequyuan', 'lookcarechild', 'diamstorm', 'popfruit', 'jumpjump', 'cossman', 'tetris', 'niu', 'werock'
     ];
     GameConfig.MoreGameName = [];
     GameConfig.GUIDESTEPNUM = 2; //新手引导总步数
